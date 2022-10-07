@@ -1,7 +1,7 @@
 import setuptools
 setuptools.setup(
   name="telegram-sdk",
-  version="1.0.0",
+  version="1.0.1",
   author="Layrz",
   author_email="software@layrz.com",
   url='https://gitlab.com/layrz-software/libraries/telegram-sdk',

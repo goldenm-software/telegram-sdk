@@ -79,7 +79,9 @@ class TelegramKeyboard:
         'one_time_keyboard': True
       }
     return {
-      'remove_keyboard': True
+      'keyboard': [],
+      'resize_keyboard': False,
+      'one_time_keyboard': False
     }
 
 class TelegramCommand:

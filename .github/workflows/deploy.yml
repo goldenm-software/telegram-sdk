@@ -29,4 +29,4 @@ jobs:
           python3 -m build
         
       - name: Upload to Python Package Index
-        run: python3 -m twine upload dist/*
+        run: TWINE_PASSWORD=${PYPI_PASSWORD} TWINE_USERNAME=${PYPI_USERNAME} python3 -m twine upload dist/*

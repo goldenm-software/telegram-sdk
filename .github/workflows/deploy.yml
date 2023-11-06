@@ -7,9 +7,6 @@ on:
 
 jobs:
   build:
-    permissions:
-      id-token: write
-
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/goldenm-software/python-builder:3.11

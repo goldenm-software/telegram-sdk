@@ -1,0 +1,32 @@
+name: "Deploy package"
+
+on:
+  push:
+    # Deploy only when the commit ends with NEXT
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/goldenm-software/python-builder:3.11
+      options: --user root
+      credentials:
+        username: ${{ github.repository_owner }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    env:
+      TWINE_PASSWORD: ${{ secrets.LAYRZ_PYPI_TOKEN }}
+      TWINE_USERNAME: ${{ secrets.LAYRZ_PYPI_USERNAME }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Build
+        run: |
+          pip install --upgrade pip build twine
+          python3 -m build
+        
+      - name: Upload to Python Package Index
+        run: python3 -m twine upload dist/*

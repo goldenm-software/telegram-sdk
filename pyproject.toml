@@ -1,6 +1,6 @@
 [project]
 name = "telegram-sdk"
-version = "1.1.0"
+version = "1.1.1"
 description = "Telegram SDK for public or private Telegram API"
 authors = [
   {name = "Golden M, Inc.", email = "software@goldenm.com"}
@@ -28,11 +28,6 @@ classifiers = [
 dependencies = [
   "requests",
 ]
-
-[tool.setuptools.packages.find]
-where = ["."]
-include = ["telegram.*"]
-namespaces = true
 
 [build-system]
 requires = ["setuptools", "setuptools-scm"]

@@ -1,6 +1,6 @@
 [project]
 name = "telegram-sdk"
-version = "1.2.0"
+version = "1.2.1"
 description = "Telegram SDK for public or private Telegram API"
 authors = [
   {name = "Golden M, Inc.", email = "software@goldenm.com"}

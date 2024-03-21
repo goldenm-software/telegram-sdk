@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.1
+
+- Added caption to `send_document` method
+
 ## 1.2.0
 
 - Added method `send_document` to send any file to the chat

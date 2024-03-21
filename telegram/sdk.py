@@ -72,6 +72,47 @@ class TelegramSdk:
     """
     return self._host
 
+  def send_document(
+    self,
+    chat_id: str | int,
+    document_id: str,
+    silent: bool = False,
+    caption: str = '',
+    mode: TelegramModes = TelegramModes.HTML,
+  ) -> tuple[bool, str | int]:
+    """
+    Send document
+    ---
+    Arguments
+      - chat_id: Chat ID to send the message (required)
+      - document_id: Document ID to send (required)
+      - silent: Indicates if the message will emit a sound or not when received (optional)
+      - caption: Caption to send with the document (optional)
+    """
+    if not isinstance(document_id, str):
+      raise TelegramException(exception=f'document_id should be str, received {type(document_id)}')
+    if not isinstance(chat_id, (str, int)):
+      raise TelegramException(exception=f'chat_id must be str or int, received {type(chat_id)}')
+    if not isinstance(silent, bool):
+      raise TelegramException(exception=f'silent must be bool, received {type(silent)}')
+    if not isinstance(mode, TelegramModes):
+      raise TelegramException(exception=f'mode must be TelegramModes class, received {type(mode)}')
+    if len(caption) > 1024:
+      raise TelegramException(exception=f'caption should be less than or equals to 1024, received {len(caption)}')
+
+    payload = {
+      'chat_id': chat_id,
+      'document': document_id,
+      'disable_notification': silent,
+      'parse_mode': mode.value,
+    }
+    with requests.post(f'{self.base_url}/sendDocument', payload) as req:
+      response = req.json()
+
+    if 'description' in response:
+      return response['ok'], response['description']
+    return response['ok'], response['result']['message_id']
+
   def send_sticker(
     self,
     chat_id: str | int,

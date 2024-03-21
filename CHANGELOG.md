@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.0
+
+- Added method `send_document` to send any file to the chat
+
 ## 1.1.0
 - Main repository moved to GitHub from GitLab
 - Declarative programming style

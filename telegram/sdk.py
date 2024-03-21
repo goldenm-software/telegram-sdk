@@ -105,6 +105,7 @@ class TelegramSdk:
       'document': document_id,
       'disable_notification': silent,
       'parse_mode': mode.value,
+      'caption': caption,
     }
     with requests.post(f'{self.base_url}/sendDocument', payload) as req:
       response = req.json()

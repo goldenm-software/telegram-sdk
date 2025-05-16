@@ -2,26 +2,25 @@
 
 As an open source project, we welcomes contributions of many forms.
 
-## To request a Merge Request
+## To request a Pull Request
+
 Please follow the next structure of your request:
 
-### Title
-A short description of your feature/fix
+1. **Title**: A short description of the change.
 
-Also, add this prefix in the title according to the scenario:
+2. **Description**: A detailed description of the change, including:
+  - What is the problem you are solving?
+  - How does your change solve the problem?
+  - Any additional information that might be helpful for reviewers.
 
-| Prefix/Tag | Meaning |
-|-|-|
-| `feature/` | New feature, like new methods, classes, etc. |
-| `fix/` | Bug fix or documentation related fix |
-| `docs/` | Documentation related changes |
+3. **Code**: The code changes you are proposing, including:
+  - The files you are changing.
+  - The specific lines of code that are being added, modified, or removed.
+  - Any tests you have written to verify your changes.
 
-### Description
-Explain your feature/fix request and why we should be approve.
+4. **Testing**: A description of how you tested your changes, including:
+  - The environment you tested in (e.g., local, staging).
+  - Any specific test cases you ran.
+  - The results of your tests.
 
-Be explicit and precise with your submission, that helps us to review and approve your request.
-
-## Code of Conduct
-
-As a contributor, you can help us keep the Layrz community open and inclusive.
-Please read and follow our code of conduct in `CODE_OF_CONDUCT.md`.
+You can attach screenshots or other files to help illustrate your changes.

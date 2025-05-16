@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    // Mandatory extensions to work with Layrz
+    "ms-python.python",
+    "charliermarsh.ruff",
+    "ms-python.vscode-pylance",
+    "njpwerner.autodocstring",
+    "Boto3typed.boto3-ide",
+    "batisteo.vscode-django",
+    "oderwat.indent-rainbow",
+    "github.copilot",
+
+    // Layrz ideal extensions to simplify your life
+    "goldenm-software.layrz-cycle-scripting"
+  ]
+}

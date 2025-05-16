@@ -1,10 +1,10 @@
-/dist
-/build
-/*.egg-info
-/.pypirc
-/test.py
-/**/*.pyc
-/.venv
-/site
+dist
+build
+*.egg-info
+test.py
+**/*.pyc
+.venv
 
-/**/*/__pycache__
+**/*/__pycache__
+
+.env

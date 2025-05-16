@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.2
+
+- Added `py.typed` to support type hints in the package
+- Re-documented all of methods and classes
+
 ## 1.2.1
 
 - Added caption to `send_document` method
